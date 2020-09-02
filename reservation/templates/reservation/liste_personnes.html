@@ -1,0 +1,12 @@
+{% extends "reservation/base.html" %}
+{% block title %}View List{% endblock %}
+
+{% block content %}
+	<ul>
+		{% for item in listeP %}
+				<li>{{item.prenom}}</li>
+			
+				<li>{{item.nom}}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

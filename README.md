@@ -1,4 +1,4 @@
 "# covoiturage" 
 "SuperAdmin"
-"username = admin"
-"password = admin1234"
+"username = ouzy"
+"password = ouzy1234"
