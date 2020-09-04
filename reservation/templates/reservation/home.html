@@ -11,24 +11,19 @@ Home
                 <th scope="col">Départ</th>
                 <th scope="col">Destination</th>
                 <th scope="col">Prix (en Fcfa)</th>
-                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <!-- <th scope="row">1</th> -->
+            {% for liste in listeT.all %}
+                <tr>
+                    <!-- <th scope="row">1</th> -->
                 
-                {% for liste in listeV.all %}
                     <td>{{ liste.depart}}</td>
                     <td>{{liste.arrivee}}</td>
                     <td>{{liste.prix}}</td>
-                    <td class="text-center">
-                        <button type="button" class="btn btn-primary btn-sm">
-                            <a href="{% url 'reserver' liste.id %}" class="text-white">Réserver</a> </button>
-                    </td>
-                {% endfor %}
-
-            </tr>
+                    
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 {% endblock %}

@@ -1,0 +1,38 @@
+{% extends "reservation/base.html" %}
+{% block title %}Liste des voyages{% endblock %}
+
+{% block content %}
+	<h1 class="text-center">Liste des voyages</h1>
+	<table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Destination</th>
+				<th scope="col">Nombre de places</th>
+				<th scope="col">Chauffeur</th>
+                <th scope="col">Actions</th>
+            </tr>
+		</thead>
+		<tbody>
+			{% for liste in listeV.all %}
+				<tr>
+					{% if liste.nbre_place > 0 %}
+						<td>{{liste.id}}</td>
+						<td>{{liste.trajet}}</td>
+						<td>{{liste.nbre_place}}</td>
+						<td>{{liste}}</td>
+						<td class="text-center clearfix">
+							<button type="button" class="btn btn-primary btn-sm float-left">
+								<a href="{% url 'reserver' liste.trajet_id user.id liste.conducteur_id %}" class="text-white">Réserver</a>
+							</button>
+							<button type="button" class="btn btn-success btn-sm float-right">
+								<a href="{% url 'infos_voyage' liste.id %}" class="text-white"
+								target="_blank" rel="noopener noreferrer">Voir la voiture</a>
+							</button>
+						</td>
+					{% endif %}
+				</tr>
+			{% endfor %}
+
+		</tbody>
+{% endblock %}
