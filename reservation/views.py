@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
+from django.contrib.auth import logout
 from reservation.models import Trajet, Conducteur, Voyage, Passager
 from .forms import TrajetForm, RegisterForm, VoyageForm
 
