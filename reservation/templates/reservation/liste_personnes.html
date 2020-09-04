@@ -3,10 +3,8 @@
 
 {% block content %}
 	<ul>
-		{% for item in listeP %}
-				<li>{{item.prenom}}</li>
-			
-				<li>{{item.nom}}</li>
+		{% for liste in listeP.all %}
+			<li>{{liste.id}} {{liste.prenom}}</li>
 		{% endfor %}
 	</ul>
 {% endblock %}

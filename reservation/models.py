@@ -4,8 +4,8 @@ class Personne(models.Model):
     prenom = models.CharField(max_length=100)
     nom = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.prenom + " " + self.nom
+    #def __str__(self):
+        #return self.prenom + " " + self.nom
 
 
 class Passager(models.Model):
@@ -20,8 +20,8 @@ class Trajet(models.Model):
     arrivee = models.CharField(max_length=150)
     prix = models.FloatField()
 
-    def __str__(self):
-        return self.depart + " " + self.arrivee
+    #def __str__(self):
+        #return self.depart + " " + self.arrivee + " " + str(self.prix)
 
 
 class Voyage(models.Model):

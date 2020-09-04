@@ -2,3 +2,7 @@
 "SuperAdmin"
 "username = ouzy"
 "password = ouzy1234"
+"Packages à installer"
+"1- pip install django-crispy-forms (linux)"
+"py -m pip install django-crispy-forms"
+"comptes username: ouzy012 mdp:master1si"
